@@ -1,0 +1,35 @@
+.about-list {
+    display: flex;
+    justify-content: space-between;
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        background-color: #F5F4FA;
+        border-radius: 4px;
+        margin-bottom: 30px;
+    }
+
+    &__topic {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--first-title-color);
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        width: 270px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--third-title-color);
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,230 @@
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    transition: opacity var(--timing-function);
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--timing-function);
+
+    min-width: 528px;
+    min-height: 581px;
+    background-color: var(--second-title-color);
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:hover,
+    &:focus {
+    fill: var(--accent-color);
+
+}
+}
+
+.modal-close {
+    color: #000000;
+}
+
+
+
+.modal-form {
+    width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 75px;
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    & textarea::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+
+.form-title {
+    position: absolute;
+    left: 41px;
+    top: 40px;
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: var(--first-title-color);
+}
+
+.form-label {
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--third-title-color);
+    margin-bottom: 4px;
+}
+
+.form-input {
+    margin: 0;
+    padding: 12px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: outline-color var(--timing-function);
+
+    .form-group:focus-within>& {
+        outline-color: var(--accent-color);
+    }
+}
+
+.input-form {
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+
+    transition: fill var(--timing-function);
+
+    .form-input:focus~& {
+        fill: var(--accent-color);
+    }
+}
+
+.modal-form input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    margin-left: 12px;
+}
+
+.form-agreement {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    margin-top: 15px;
+
+    color: var(--third-title-color);
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:checked~.agreement::after {
+        background-color: var(--accent-color);
+        background-image: url(../images/icon\ check.svg);
+        border: transparent;
+    }
+
+}
+
+
+.agreement::after {
+    position: absolute;
+    left: 12px;
+    top: 4px;
+
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--first-title-color);
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+}
+
+.contract {
+    color: var(--accent-color);
+}
+
+.modal-form button[type="submit"] {
+
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 74px auto 40px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--second-title-color);
+
+    border: none;
+
+    background-color: var(--accent-color);
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    transition: background-color var(--timing-function);
+
+    &:hover,
+    &:focus {
+    background-color: #188CE8;
+}
+}
+
+
+
+.comment {
+    padding: 12px 16px;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+    max-width: 448px;
+    max-height: 120px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: outline-color var(--timing-function);
+
+    .form-group:focus-within>& {
+        outline-color: var(--accent-color);
+    }
+}

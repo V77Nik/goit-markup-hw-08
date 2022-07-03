@@ -1,0 +1,43 @@
+// {
+//     "[json]": {
+//         "editor.defaultFormatter": "esbenp.prettier-vscode"
+//     },
+//     "[javascript]": {
+//         "editor.defaultFormatter": "esbenp.prettier-vscode"
+//     },
+//     "[css]": {
+//         "editor.defaultFormatter": "vscode.css-language-features"
+//     },
+//     "[scss]": {
+//         "editor.defaultFormatter": "esbenp.prettier-vscode"
+//     },
+//     "[html]": {
+//         "editor.defaultFormatter": "vscode.html-language-features"
+//     },
+//     "editor.formatOnSave": true,
+//     "editor.formatOnPaste": true,
+//     "editor.formatOnType": true,
+//     "cSpell.language": "en,ru"
+// }
+
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css"
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/css"
+        }
+    ],
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "liveSassCompile.settings.generateMap": true,
+    "liveServer.settings.port": 1235,
+    "liveSassCompile.settings.autoprefix": null
+}
