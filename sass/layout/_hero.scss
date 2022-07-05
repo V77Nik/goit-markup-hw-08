@@ -1,28 +1,88 @@
 .hero {
+    max-width: 1600px;
     background-color: var(--key-bgc-color);
     text-align: center;
-    padding: 200px 0px;
-    height: 600px;
-    background-image: linear-gradient(
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)
-        ),
-        url(../images/Img10.jpg);
+    padding: 118px 0px;
+    height: 400px;
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+.hero {
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: 767px) {
+        width: 480px;
+        background-image: linear-gradient(
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url(../images/img-mobile.jpg);
+
+        @media screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url(../images/img-mobile2x.jpg);
+        }
+    }
+    @media screen and (min-width: 768px) {
+        width: 768px;
+        background-image: linear-gradient(
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url(../images/img-tablet.jpg);
+
+        @media screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url(../images/img-tablet2x.jpg);
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        width: 1600px;
+        padding: 200px 0px;
+        height: 600px;
+        background-image: linear-gradient(
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url(../images/Img10.jpg);
+
+        @media screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url(../images/img2x.jpg);
+        }
+    }
+}
+
 .hero-title {
     margin-top: 0px;
     margin-bottom: 30px;
+  
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--second-title-color);
+
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.62;
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
 
 .hero-btn {

@@ -1,13 +1,25 @@
 .about-list {
-    display: flex;
-    justify-content: space-between;
+    @media screen and (min-width: 480px) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 738px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1170px;
+    }
 
     &__icon {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 120px;
-        background-color: #F5F4FA;
+        background-color: #f5f4fa;
         border-radius: 4px;
         margin-bottom: 30px;
     }
@@ -20,6 +32,9 @@
         text-transform: uppercase;
         color: var(--first-title-color);
         margin-bottom: 10px;
+        @media screen and (max-width: 767px) {
+            text-align: center;
+        }
     }
 
     &__title {
@@ -31,5 +46,22 @@
         color: var(--third-title-color);
         margin-top: 0;
         margin-bottom: 0;
+        @media screen and (max-width: 1199px) {
+            width: 100%;
+        }
+    }
+    &__pic {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 30px) / 2);
+        }
+        @media screen and (min-width: 1200px) {
+            width: calc((100% - 90px) / 4);
+        }
     }
 }
+
+

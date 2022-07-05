@@ -53,6 +53,7 @@ body {
 
 .section {
   padding: 60px 0px;
+  max-width: 1600px;
 }
 @media screen and (min-width: 1200px) {
   .section {
@@ -363,25 +364,73 @@ body {
 }
 
 .hero {
+  max-width: 1600px;
   background-color: var(--key-bgc-color);
   text-align: center;
-  padding: 200px 0px;
-  height: 600px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img10.jpg);
+  padding: 118px 0px;
+  height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.hero {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    width: 480px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-mobile.jpg);
+  }
+}
+@media screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-mobile2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-tablet.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-tablet2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    width: 1600px;
+    padding: 200px 0px;
+    height: 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img10.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img2x.jpg);
+  }
 }
 
 .hero-title {
   margin-top: 0px;
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--second-title-color);
+}
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 26px;
+    line-height: 1.62;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero-btn {
@@ -401,16 +450,30 @@ body {
   background-color: #188ce8;
 }
 
-.about-list {
-  display: flex;
-  justify-content: space-between;
+@media screen and (min-width: 480px) {
+  .about-list {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about-list {
+    width: 738px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-list {
+    width: 1170px;
+  }
 }
 .about-list__icon {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 120px;
-  background-color: #F5F4FA;
+  background-color: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
 }
@@ -423,6 +486,11 @@ body {
   color: var(--first-title-color);
   margin-bottom: 10px;
 }
+@media screen and (max-width: 767px) {
+  .about-list__topic {
+    text-align: center;
+  }
+}
 .about-list__title {
   width: 270px;
   font-weight: 400;
@@ -432,6 +500,27 @@ body {
   color: var(--third-title-color);
   margin-top: 0;
   margin-bottom: 0;
+}
+@media screen and (max-width: 1199px) {
+  .about-list__title {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-list__pic {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about-list__pic {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-list__pic {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .picture-title {
@@ -474,6 +563,11 @@ body {
 .picture {
   padding-top: 0;
 }
+@media screen and (max-width: 1199px) {
+  .picture {
+    display: none;
+  }
+}
 
 .team-title {
   font-weight: 700;
@@ -510,13 +604,37 @@ body {
 }
 
 .team-list {
-  display: flex;
   justify-content: space-between;
+}
+@media screen and (min-width: 480px) {
+  .team-list {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 738px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-list {
+    width: 1170px;
+  }
 }
 
 .team-item-foto {
   margin: 0;
   padding: 0;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .team-item-foto > picture {
+    width: 353px;
+    height: auto;
+  }
 }
 
 .team {
