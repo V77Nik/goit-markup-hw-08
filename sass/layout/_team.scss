@@ -35,18 +35,18 @@
 .team-list {
     justify-content: space-between;
     @media screen and (min-width: 480px) {
-        width: 450px;
+        // width: 450px;
     }
 
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
-        width: 738px;
+        // width: 738px;
     }
 
     @media screen and (min-width: 1200px) {
-        width: 1170px;
+        // width: 1170px;
     }
 }
 
@@ -55,11 +55,20 @@
     padding: 0;
 }
 
-.team-item-foto > picture {
-    @media screen and (min-width: 767px) and (max-width: 1199px) {
-        width: 353px;
-        height: auto;
+.team-item {
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
     }
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 90px) / 4);
+    }
+}
+
+.picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
 }
 
 .team {

@@ -1,14 +1,15 @@
 .regular {
-    padding: 94px 0px;
+    padding: 60px 0px;
+    @media screen and (min-width: 1200px) {
+        padding: 94px 0px;
+    }
 }
 
 .regular-list {
     display: flex;
     justify-content: center;
-}
-
-.clients:not(:last-child) {
-    margin-right: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .regular-icon-link {
@@ -36,4 +37,18 @@
 .team-icon-small:hover,
 .team-icon-small:focus {
     fill: currentColor;
+}
+
+.regular .team-title {
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
+}
+
+.clients .regular-icon-link {
+    @media screen and (min-width: 480px) {
+        width: 210px;
+        height: auto;
+    }
 }
