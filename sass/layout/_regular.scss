@@ -19,7 +19,7 @@
 
     border: 1px solid #afb1b8;
     border-radius: 4px;
-    width: 170px;
+    // width: 170px;
     height: 92px;
 
     fill: #afb1b8;
@@ -46,9 +46,14 @@
     }
 }
 
-.clients .regular-icon-link {
-    @media screen and (min-width: 480px) {
-        width: 210px;
-        height: auto;
+.clients {
+    @media screen and (max-width: 767px) {
+        width: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 60px) / 3);
+    }
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 150px) / 6);
     }
 }
