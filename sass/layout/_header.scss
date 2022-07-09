@@ -27,11 +27,30 @@
 
         transition: color var(--timing-function);
     }
+
+    @media screen and (max-width: 767px) {
+        height: 60px;
+    }
+}
+
+.nav__list {
+    display: flex;
+    margin-left: 93px;
+    margin-right: 305px;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 }
 
 .connect {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
     &__icon {
         margin-right: 10px;
         fill: currentColor;
@@ -83,12 +102,110 @@
     color: var(--accent-color);
 }
 
-.nav__list {
-    display: flex;
-    margin-left: 93px;
-    margin-right: 305px;
-}
-
 .nav__item:not(:last-child) {
     margin-right: 50px;
+}
+
+.mob-menu-open,
+.mob-menu-close {
+    padding: 0;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: #fff;
+
+    // &:hover,
+    // &:focus {
+    //     fill: var(--accent-color);
+    // }
+}
+
+.mob-menu-close {
+    padding: 0;
+    border: none;
+    background-color: #fff;
+}
+
+.mob-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 48px;
+    .mob-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        overflow-y: auto;
+    }
+}
+
+.mob-menu-list {
+    margin-bottom: 20px;
+}
+
+.mob-menu-link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+
+    color: var(--first-title-color);
+
+    &.current {
+        color: var(--accent-color);
+    }
+}
+
+.mob-menu-item:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+.mob-connect-tel {
+    display: block;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: calc(40 / 34);
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+    margin-bottom: 32px;
+}
+
+.mob-mailto {
+    margin-bottom: 64px;
+}
+
+.mob-connect-mailto {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: var(--third-title-color);
+}
+
+.soc-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.02em;
+    color: #2196f3;
+}
+.mob-soc {
+    display: flex;
+    flex-wrap: wrap;
+}
+.soc-link {
+    padding-right: 10px;
+}
+.mob-soc :not(:first-child) {
+    margin-left: 10px;
+}
+.mob-soc :not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
 }

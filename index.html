@@ -29,7 +29,6 @@
                     <a class="nav__logo link" href="/"
                         >Web<span class="nav__desc">Studio</span></a
                     >
-
                     <ul class="nav__list list">
                         <li class="nav__item">
                             <a
@@ -76,11 +75,106 @@
                         </a>
                     </li>
                 </ul>
+                <button type="button" class="mob-menu-open">
+                    <svg class="" width="40" height="40">
+                        <use
+                            href="./images/symbol-defs-icon.svg#menu_40px"
+                        ></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="mob-menu is-hidden">
+                <div class="mob-container">
+                    <div class="section-top">
+                        <button type="button" class="mob-menu-close">
+                            <svg class="" width="40" height="40">
+                                <use
+                                    href="./images/symbol-defs-icon.svg#close_40px"
+                                ></use>
+                            </svg>
+                        </button>
+                        <ul class="mob-menu-list list">
+                            <li class="mob-menu-item">
+                                <a
+                                    href="./index.html"
+                                    class="mob-menu-link link current"
+                                    >Студия</a
+                                >
+                            </li>
+                            <li class="mob-menu-item">
+                                <a
+                                    href="./portfolio.html"
+                                    class="mob-menu-link link"
+                                    >Портфолио</a
+                                >
+                            </li>
+                            <li class="mob-menu-item">
+                                <a href="#" class="mob-menu-link link"
+                                    >Контакты</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section-bottom">
+                        <ul class="mob-connect list">
+                            <li class="mob-tel">
+                                <a
+                                    class="mob-connect-tel link"
+                                    href="tel:+380961111111"
+                                >
+                                    +38 096 111 11 11
+                                </a>
+                            </li>
+                            <li class="mob-mailto">
+                                <a
+                                    class="mob-connect-mailto link"
+                                    href="mailto:info@devstudio.com"
+                                >
+                                    info@devstudio.com
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="mob-soc list">
+                            <li class="soc-item">
+                                <a
+                                    href=""
+                                    class="soc-link link"
+                                    rel="noopener nofollow norefferer"
+                                    >Instagram</a
+                                >
+                            </li>
+                            <li class="soc-item">
+                                <a
+                                    href=""
+                                    class="soc-link link"
+                                    rel="noopener nofollow norefferer"
+                                    >Twitter</a
+                                >
+                            </li>
+                            <li class="soc-item">
+                                <a
+                                    href=""
+                                    class="soc-link link"
+                                    rel="noopener nofollow norefferer"
+                                    >Facebook</a
+                                >
+                            </li>
+                            <li class="soc-item">
+                                <a
+                                    href=""
+                                    class="soc-link link"
+                                    rel="noopener nofollow norefferer"
+                                    >Linkedln</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <!-- <main> -->
-        <!-- <section class="hero">
+        <main>
+            <section class="hero">
                 <h1 class="hero-title">
                     Эффективные решения <br />
                     для вашего бизнеса
@@ -88,66 +182,78 @@
                 <button type="button" class="hero-btn" data-modal-open>
                     Заказать услугу
                 </button>
-            </section> -->
+            </section>
 
-        <!-- <section class="about section">
-      <div class="container">
-        <h2 class="visually-hidden">Наши преимущества</h2>
-        <ul class="about-list list">
-          <li class="about-list__pic">
-            <div class="about-list__icon">
-              <svg width="65" height="70">
-                <use href="./images/symbol-defs-icon.svg#antenna-11"></use>
-              </svg>
-            </div>
+            <section class="about section">
+                <div class="container">
+                    <h2 class="visually-hidden">Наши преимущества</h2>
+                    <ul class="about-list list">
+                        <li class="about-list__pic">
+                            <div class="about-list__icon">
+                                <svg width="65" height="70">
+                                    <use
+                                        href="./images/symbol-defs-icon.svg#antenna-11"
+                                    ></use>
+                                </svg>
+                            </div>
 
-            <h3 class="about-list__topic">Внимание к деталям</h3>
-            <p class="about-list__title">
-              Идейные соображения, а также начало повседневной работы по
-              формированию позиции.
-            </p>
-          </li>
-          <li class="about-list__pic">
-            <div class="about-list__icon">
-              <svg width="67" height="70">
-                <use href="./images/symbol-defs-icon.svg#clock-11"></use>
-              </svg>
-            </div>
-            <h3 class="about-list__topic">Пунктуальность</h3>
-            <p class="about-list__title">
-              Задача организации, в особенности же рамки и место обучения кадров
-              влечет за собой.
-            </p>
-          </li>
-            <li class="about-list__pic">
-            <div class="about-list__icon">
-              <svg width="70" height="70">
-                <use href="./images/symbol-defs-icon.svg#diagram-11"></use>
-              </svg>
-            </div>
-            <h3 class="about-list__topic">Планирование</h3>
-            <p class="about-list__title">
-              Равным образом консультация с широким активом в значительной
-              степени обуславливает.
-            </p>
-          </li>
-          <li class="about-list__pic">
-            <div class="about-list__icon">
-              <svg width="70" height="70">
-                <use href="./images/symbol-defs-icon.svg#astronaut-11"></use>
-              </svg>
-            </div>
-            <h3 class="about-list__topic">Современные технологии</h3>
-            <p class="about-list__title">
-              Значимость этих проблем настолько очевидна, что реализация
-              плановых заданий.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section> -->
+                            <h3 class="about-list__topic">
+                                Внимание к деталям
+                            </h3>
+                            <p class="about-list__title">
+                                Идейные соображения, а также начало повседневной
+                                работы по формированию позиции.
+                            </p>
+                        </li>
+                        <li class="about-list__pic">
+                            <div class="about-list__icon">
+                                <svg width="67" height="70">
+                                    <use
+                                        href="./images/symbol-defs-icon.svg#clock-11"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <h3 class="about-list__topic">Пунктуальность</h3>
+                            <p class="about-list__title">
+                                Задача организации, в особенности же рамки и
+                                место обучения кадров влечет за собой.
+                            </p>
+                        </li>
+                        <li class="about-list__pic">
+                            <div class="about-list__icon">
+                                <svg width="70" height="70">
+                                    <use
+                                        href="./images/symbol-defs-icon.svg#diagram-11"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <h3 class="about-list__topic">Планирование</h3>
+                            <p class="about-list__title">
+                                Равным образом консультация с широким активом в
+                                значительной степени обуславливает.
+                            </p>
+                        </li>
+                        <li class="about-list__pic">
+                            <div class="about-list__icon">
+                                <svg width="70" height="70">
+                                    <use
+                                        href="./images/symbol-defs-icon.svg#astronaut-11"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <h3 class="about-list__topic">
+                                Современные технологии
+                            </h3>
+                            <p class="about-list__title">
+                                Значимость этих проблем настолько очевидна, что
+                                реализация плановых заданий.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-        <!-- <section class="picture section">
+            <section class="picture section">
                 <div class="container">
                     <h2 class="picture-title">Чем мы занимаемся</h2>
                     <ul class="picture-list list">
@@ -183,9 +289,9 @@
                         </li>
                     </ul>
                 </div>
-            </section> -->
+            </section>
 
-        <!-- <section class="team section">
+            <section class="team section">
                 <div class="container">
                     <h2 class="team-title">Наша команда</h2>
                     <ul class="team-list list">
@@ -551,9 +657,9 @@
                         </li>
                     </ul>
                 </div>
-            </section> -->
+            </section>
 
-        <!-- <section class="regular">
+            <section class="regular">
                 <div class="container">
                     <h2 class="team-title">Постоянные клиенты</h2>
                     <ul class="regular-list list">
@@ -637,10 +743,10 @@
                         </li>
                     </ul>
                 </div>
-            </section> -->
-        <!-- </main> -->
+            </section>
+        </main>
 
-        <!-- <footer class="footer">
+        <footer class="footer">
             <div class="container">
                 <div class="footer-tablet">
                     <div class="footer-contact">
@@ -650,7 +756,6 @@
                         <address id="контакты" class="footer-address">
                             <ul class="footer-list list">
                                 <li>
-                                   
                                     <a
                                         class="footer-map link"
                                         href="https://goo.gl/maps/TcgmR4wKd2KzDb7y6"
@@ -750,8 +855,7 @@
                     </form>
                 </div>
             </div>
-        </footer> -->
-        -->
+        </footer>
 
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
@@ -845,5 +949,6 @@
         </div>
 
         <script src="./js/modal.js"></script>
+        <script src="./js/menu.js"></script>
     </body>
 </html>
