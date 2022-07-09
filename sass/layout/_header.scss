@@ -2,6 +2,7 @@
 .main-nav {
     display: flex;
     align-items: center;
+
     &__logo {
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
@@ -16,19 +17,19 @@
     }
     &__link {
         display: block;
-        padding-top: 32px;
-        padding-bottom: 32px;
-
+        padding: 32px 0px;
         font-weight: 500;
         font-size: 14px;
         line-height: 1.14;
         letter-spacing: 0.02em;
         color: var(--first-title-color);
-
         transition: color var(--timing-function);
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            padding: 24px 0px;
+        }
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1199px) {
         height: 60px;
     }
 }
@@ -41,6 +42,9 @@
     @media screen and (max-width: 767px) {
         display: none;
     }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin: 0px 76px;
+    }
 }
 
 .connect {
@@ -49,6 +53,11 @@
 
     @media screen and (max-width: 767px) {
         display: none;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
     }
 
     &__icon {
@@ -76,6 +85,12 @@
         }
     }
 }
+.connect__details {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding: 0;
+        margin: 0;
+    }
+}
 
 .current {
     color: var(--accent-color);
@@ -95,6 +110,9 @@
 
 .tel {
     margin-right: 0px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-top: 10px;
+    }
 }
 
 .nav__link:hover,
@@ -115,16 +133,16 @@
     margin-right: 10px;
     background-color: #fff;
 
-    // &:hover,
-    // &:focus {
-    //     fill: var(--accent-color);
-    // }
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
 }
 
-.mob-menu-close {
-    padding: 0;
-    border: none;
-    background-color: #fff;
+.mob-menu-open {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }
 
 .mob-menu {
@@ -134,9 +152,9 @@
     background-color: #fff;
     width: 100vw;
     height: 100vh;
-    padding-left: 40px;
-    padding-top: 10px;
-    padding-bottom: 48px;
+    padding: 10px 15px 48px 40px;
+    z-index: 1;
+
     .mob-container {
         display: flex;
         flex-direction: column;
@@ -144,10 +162,14 @@
         height: 100%;
         overflow-y: auto;
     }
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
 }
 
 .mob-menu-list {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .mob-menu-link {

@@ -26,10 +26,16 @@
     min-height: 581px;
     background-color: var(--second-title-color);
 
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        min-width: 450px;
+        min-height: 609px;
     }
 }
 
@@ -40,27 +46,28 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     &:hover,
     &:focus {
-    fill: var(--accent-color);
-
-}
+        fill: var(--accent-color);
+    }
 }
 
 .modal-close {
     color: #000000;
 }
 
-
-
 .modal-form {
     width: 448px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 75px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 370px;
+        padding-top: 112px;
+    }
 }
 
 .form-group {
@@ -76,7 +83,6 @@
     }
 }
 
-
 .form-title {
     position: absolute;
     left: 41px;
@@ -88,10 +94,10 @@
     line-height: 1.15;
     letter-spacing: 0.03em;
     color: var(--first-title-color);
+    text-align: center;
 }
 
 .form-label {
-
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -109,7 +115,7 @@
 
     transition: outline-color var(--timing-function);
 
-    .form-group:focus-within>& {
+    .form-group:focus-within > & {
         outline-color: var(--accent-color);
     }
 }
@@ -121,12 +127,12 @@
 
     transition: fill var(--timing-function);
 
-    .form-input:focus~& {
+    .form-input:focus ~ & {
         fill: var(--accent-color);
     }
 }
 
-.modal-form input[type="checkbox"] {
+.modal-form input[type='checkbox'] {
     width: 15px;
     height: 15px;
     margin-right: 8px;
@@ -141,22 +147,24 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     margin-top: 15px;
-
     color: var(--third-title-color);
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+    }
 }
 
 .checkbox {
     -webkit-appearance: none;
     -moz-appearance: none;
 
-    &:checked~.agreement::after {
+    &:checked ~ .agreement::after {
         background-color: var(--accent-color);
-        background-image: url(../images/icon\ check.svg);
+        background-image: url(../images/icon/check.svg);
         border: transparent;
     }
-
 }
-
 
 .agreement::after {
     position: absolute;
@@ -168,18 +176,17 @@
     width: 16px;
     height: 16px;
     border: 2px solid var(--first-title-color);
-    background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-
 }
 
 .contract {
     color: var(--accent-color);
 }
 
-.modal-form button[type="submit"] {
-
+.modal-form button[type='submit'] {
     display: block;
     width: 200px;
     height: 50px;
@@ -203,11 +210,9 @@
 
     &:hover,
     &:focus {
-    background-color: #188CE8;
+        background-color: #188ce8;
+    }
 }
-}
-
-
 
 .comment {
     padding: 12px 16px;
@@ -224,7 +229,7 @@
 
     transition: outline-color var(--timing-function);
 
-    .form-group:focus-within>& {
+    .form-group:focus-within > & {
         outline-color: var(--accent-color);
     }
 }
